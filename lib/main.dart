@@ -1,6 +1,5 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'src/web_view_stack.dart';
 
 void main() {
   runApp(
@@ -18,25 +17,13 @@ class WebViewApp extends StatefulWidget {
 }
 
 class _WebViewAppState extends State<WebViewApp> {
-  // Add from here ...
-  @override
-  void initState() {
-    if (Platform.isAndroid) {
-      WebView.platform = SurfaceAndroidWebView();
-    }
-    super.initState();
-  }
-  // ... to here.
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('HashStrix'),
       ),
-      body: const WebView(
-        initialUrl: 'https://hashstrix.com/',
-      ),
+      body: const WebViewStack(),
     );
   }
 }
