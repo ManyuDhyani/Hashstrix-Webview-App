@@ -4,6 +4,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 enum _MenuOptions {
   navigationDelegate,
+  userAgent,
 }
 
 class Menu extends StatelessWidget {
@@ -20,15 +21,22 @@ class Menu extends StatelessWidget {
           onSelected: (value) async {
             switch (value) {
               case _MenuOptions.navigationDelegate:
-                controller.data!
-                    .loadUrl('https://hashstrix.com/accounts/login/');
+                controller.data!.loadUrl('https://youtube.com');
+                break;
+
+              case _MenuOptions.userAgent:
+                final userAgent = await controller.data!
+                    .runJavascriptReturningResult('navigator.userAgent');
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(userAgent),
+                ));
                 break;
             }
           },
           itemBuilder: (context) => [
             const PopupMenuItem<_MenuOptions>(
               value: _MenuOptions.navigationDelegate,
-              child: Text('Login'),
+              child: Text('Navigate to YouTube'),
             ),
           ],
         );
