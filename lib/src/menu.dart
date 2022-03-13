@@ -21,7 +21,8 @@ class Menu extends StatelessWidget {
           onSelected: (value) async {
             switch (value) {
               case _MenuOptions.navigationDelegate:
-                controller.data!.loadUrl('https://youtube.com');
+                controller.data!
+                    .loadUrl('https://hashstrix.com/profile/account/');
                 break;
 
               case _MenuOptions.userAgent:
@@ -36,7 +37,7 @@ class Menu extends StatelessWidget {
           itemBuilder: (context) => [
             const PopupMenuItem<_MenuOptions>(
               value: _MenuOptions.navigationDelegate,
-              child: Text('Navigate to YouTube'),
+              child: Text('Profile'),
             ),
           ],
         );

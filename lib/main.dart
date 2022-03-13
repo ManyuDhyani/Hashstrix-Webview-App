@@ -23,22 +23,21 @@ class WebViewApp extends StatefulWidget {
 }
 
 class _WebViewAppState extends State<WebViewApp> {
-  final controller =
-      Completer<WebViewController>(); // Instantiate the controller
+  final controller = Completer<WebViewController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('HashStrix'),
-        // Add from here ...
+        backgroundColor: Colors.black,
+        elevation: 0,
         actions: [
           NavigationControls(controller: controller),
           Menu(controller: controller),
         ],
-        // ... to here.
       ),
-      body: WebViewStack(controller: controller), // Add the controller argument
+      body: WebViewStack(controller: controller),
     );
   }
 }
