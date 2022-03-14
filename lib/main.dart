@@ -29,7 +29,13 @@ class _WebViewAppState extends State<WebViewApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HashStrix'),
+        title: const Text(
+          'HashStrix',
+          style: TextStyle(
+            fontFamily: 'Klavika',
+            fontSize: 24,
+          ),
+        ),
         backgroundColor: Colors.black,
         elevation: 0,
         actions: [
