@@ -22,7 +22,7 @@ class Menu extends StatelessWidget {
             switch (value) {
               case _MenuOptions.navigationDelegate:
                 controller.data!
-                    .loadUrl('https://hashstrix.com/profile/account/');
+                    .loadUrl('https://hashstrix.com/accounts/login/');
                 break;
 
               case _MenuOptions.userAgent:
@@ -37,7 +37,7 @@ class Menu extends StatelessWidget {
           itemBuilder: (context) => [
             const PopupMenuItem<_MenuOptions>(
               value: _MenuOptions.navigationDelegate,
-              child: Text('Profile'),
+              child: Text('Login'),
             ),
           ],
         );

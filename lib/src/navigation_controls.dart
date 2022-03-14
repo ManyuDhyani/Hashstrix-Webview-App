@@ -18,6 +18,11 @@ class NavigationControls extends StatelessWidget {
             controller == null) {
           return Row(
             children: const <Widget>[
+              Icon(Icons.home_filled),
+              Icon(Icons.trending_up_outlined),
+              Icon(Icons.create_outlined),
+              Icon(Icons.notifications_active_outlined),
+              Icon(Icons.account_circle_outlined),
               Icon(Icons.arrow_back_ios),
               Icon(Icons.arrow_forward_ios),
               Icon(Icons.replay),
@@ -27,6 +32,36 @@ class NavigationControls extends StatelessWidget {
 
         return Row(
           children: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.home_filled),
+              onPressed: () {
+                controller.loadUrl('https://hashstrix.com/blogs/');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.trending_up_outlined),
+              onPressed: () {
+                controller.loadUrl('https://hashstrix.com/trending/');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.create_outlined),
+              onPressed: () {
+                controller.loadUrl('https://hashstrix.com/create/');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.notifications_active_outlined),
+              onPressed: () {
+                controller.loadUrl('https://hashstrix.com/notifications');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.account_circle_outlined),
+              onPressed: () {
+                controller.loadUrl('https://hashstrix.com/profile/account/');
+              },
+            ),
             IconButton(
               icon: const Icon(Icons.arrow_back_ios),
               onPressed: () async {

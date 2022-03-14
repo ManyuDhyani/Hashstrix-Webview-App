@@ -33,11 +33,18 @@ class _WebViewAppState extends State<WebViewApp> {
         backgroundColor: Colors.black,
         elevation: 0,
         actions: [
-          NavigationControls(controller: controller),
           Menu(controller: controller),
         ],
       ),
       body: WebViewStack(controller: controller),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            NavigationControls(controller: controller),
+          ],
+        ),
+      ),
     );
   }
 }
