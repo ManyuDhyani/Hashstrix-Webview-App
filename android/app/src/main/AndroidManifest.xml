@@ -2,7 +2,7 @@
     package="com.example.hashstrix_webview_app">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="hashstrix_webview_app"
+        android:label="HashStrix"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

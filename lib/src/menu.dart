@@ -5,6 +5,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 enum _MenuOptions {
   navigationDelegate,
   userAgent,
+  javascriptChannel,
 }
 
 class Menu extends StatelessWidget {
@@ -31,6 +32,20 @@ class Menu extends StatelessWidget {
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   content: Text(userAgent),
                 ));
+                break;
+              case _MenuOptions.javascriptChannel:
+                await controller.data!.runJavascript('''
+var req = new XMLHttpRequest();
+req.open('GET', "https://api.ipify.org/?format=json");
+req.onload = function() {
+  if (req.status == 200) {
+    let response = JSON.parse(req.responseText);
+    SnackBar.postMessage("IP Address: " + response.ip);
+  } else {
+    SnackBar.postMessage("Error: " + req.status);
+  }
+}
+req.send();''');
                 break;
             }
           },
