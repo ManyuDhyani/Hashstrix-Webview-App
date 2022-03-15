@@ -44,6 +44,7 @@ class _WebViewAppState extends State<WebViewApp> {
       ),
       body: WebViewStack(controller: controller),
       bottomNavigationBar: BottomAppBar(
+        color: Colors.black,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
