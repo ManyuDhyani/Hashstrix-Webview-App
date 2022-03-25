@@ -43,11 +43,15 @@ class _WebViewStackState extends State<WebViewStack> {
           // Add from here ...
           navigationDelegate: (navigation) {
             final host = Uri.parse(navigation.url).host;
-            if (host.contains('youtube.com')) {
+            if (host.contains('youtube.com') ||
+                host.contains('facebook.com') ||
+                host.contains('instagram.com') ||
+                host.contains('linkedin.com') ||
+                host.contains('twitter.com')) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(
-                    'Blocking navigation to $host',
+                    'Blocking navigation to $host. Go our site www.hashstrix.com for more info.',
                   ),
                 ),
               );
