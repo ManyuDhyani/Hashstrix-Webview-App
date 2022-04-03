@@ -1,16 +1,20 @@
 # hashstrix_webview_app
 
-A new Flutter project.
+A WebView app for HashStrix made from flutter and Django.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+<img src="Readme_images/1.jpg" height="600">
 
-A few resources to get you started if this is your first Flutter project:
+<img src="Readme_images/2.jpg" height="600">
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<img src="Readme_images/3.jpg" height="600">
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="Readme_images/4.jpg" height="600">
+
+<img src="Readme_images/5.jpg" height="600">
+
+<img src="Readme_images/6.jpg" height="600">
+
+<img src="Readme_images/7.jpg" height="600">
+
